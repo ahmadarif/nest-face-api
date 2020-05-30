@@ -1,6 +1,6 @@
 import { Controller, HttpException, HttpStatus, Post, Query, Res, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { FaceService } from 'src/services/face.service';
+import { FaceService } from '../services/face.service';
 
 @Controller('faces')
 export class FaceController {
@@ -16,9 +16,9 @@ export class FaceController {
     @Query('renderLandmark') renderLandmark
   ) {
     try {
-      let isMultiple = mode === 'multiple';
-      let isRender = render === 'true';
-      let isRenderLandmark = renderLandmark === 'true';
+      const isMultiple = mode === 'multiple';
+      const isRender = render === 'true';
+      const isRenderLandmark = renderLandmark === 'true';
 
       let result: any;
       if (isMultiple) {
@@ -51,9 +51,9 @@ export class FaceController {
     @Query('renderLandmark') renderLandmark
   ) {
     try {
-      let isMultiple = mode === 'multiple';
-      let isRender = render === 'true';
-      let isRenderLandmark = renderLandmark === 'true';
+      const isMultiple = mode === 'multiple';
+      const isRender = render === 'true';
+      const isRenderLandmark = renderLandmark === 'true';
 
       let result: any;
       if (isMultiple) {

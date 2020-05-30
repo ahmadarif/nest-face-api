@@ -5,11 +5,10 @@ import '@tensorflow/tfjs-node';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import * as faceapi from 'face-api.js';
-import { TinyFaceDetectorOptions, DetectAllFaceLandmarksTask, DetectSingleFaceLandmarksTask, FaceDetection } from 'face-api.js';
+import { TinyFaceDetectorOptions } from 'face-api.js';
 import { unlink } from 'fs';
 import { join } from 'path';
 import { promisify } from 'util';
-
 
 @Injectable()
 export class FaceService {
